@@ -1,16 +1,60 @@
-# React + Vite
+# ArcPay Proof
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ArcPay Proof is a small Web3 payment proof application built to demonstrate verifiable USDC payments on Arc Mainnet.
 
-Currently, two official plugins are available:
+The app connects a user's wallet, reads their USDC balance, sends USDC to a recipient, waits for the transaction to be confirmed, and displays a payment proof containing the network, recipient, transaction hash, and a link to verify the transaction on ArcScan.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+https://arcpay-proof-git-master-arc-pay-proof.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What Arc Is Used For
 
-## Expanding the ESLint configuration
+ArcPay Proof uses Arc Mainnet as the blockchain settlement layer for USDC payments.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application uses Arc Mainnet to:
+
+* Connect a user's wallet
+* Read the user's USDC balance
+* Send USDC transactions
+* Confirm transactions on-chain
+* Provide a verifiable transaction hash
+
+## How It Works
+
+1. Connect a wallet to Arc Mainnet.
+2. Enter the recipient's wallet address.
+3. Enter the USDC amount.
+4. Confirm the transaction in the wallet.
+5. Wait for the Arc Mainnet transaction to be confirmed.
+6. View the resulting payment proof.
+7. Verify the transaction using ArcScan.
+
+## Example Transaction
+
+A real USDC payment was tested on Arc Mainnet during development.
+
+Transaction hash:
+
+`0x8347974616adb72d93c31084bf5bb13e5604c34ce9ae635c2059a8ab49c27c29`
+
+## Tech Stack
+
+* React
+* Vite
+* JavaScript
+* ethers.js
+* USDC on Arc Mainnet
+
+## Arc Mainnet
+
+* Chain ID: `5042`
+* USDC contract: `0x3600000000000000000000000000000000000000`
+
+## Project Purpose
+
+ArcPay Proof is a proof-of-concept demonstrating how a simple application can use USDC on Arc Mainnet to create a transparent and verifiable payment experience.
+
+## Repository
+
+https://github.com/Dringim1/arcpay-proof
